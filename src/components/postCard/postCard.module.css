@@ -21,8 +21,15 @@
 
 .date {
     font-size: 12px;
-    transform: rotate(270deg);
+    flex-direction: column;
     margin: auto;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 .title {

@@ -14,8 +14,6 @@ export const metadata = {
 const ContactPage = () => {
   // const a = Math.random();
 
-  // console.log(a);
-
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
