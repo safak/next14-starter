@@ -85,12 +85,17 @@ export const deleteUser = async (formData) => {
 };
 
 export const handleGithubLogin = async () => {
-  "use server";
   await signIn("github");
 };
 
+export const handleGoogleLogin = async () => {
+  await signIn("google");
+};
+
+export const handleFacebookLogin = async () => {
+  await signIn("facebook");
+};
 export const handleLogout = async () => {
-  "use server";
   await signOut();
 };
 
