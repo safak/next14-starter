@@ -1,22 +1,23 @@
-import React from "react";
-import styles from "./postUser.module.css";
 import { getUser } from "@/lib/data";
+import styles from "./postUser.module.css";
 import Image from "next/image";
 
+// FETCH DATA WITH AN API
 // const getData = async (userId) => {
-//   const res = await fetch(
-//     `https://jsonplaceholder.typicode.com/users/${userId}`,
-//     { cache: "no-store" }
-//   );
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}` ,{cache:"no-store"});
 
 //   if (!res.ok) {
-//     throw new Error("Bir şeyler yanlış gitti");
+//     throw new Error("Something went wrong");
 //   }
+
 //   return res.json();
 // };
 
 const PostUser = async ({ userId }) => {
+  // FETCH DATA WITH AN API
   // const user = await getData(userId);
+
+  // FETCH DATA WITHOUT AN API
   const user = await getUser(userId);
 
   return (

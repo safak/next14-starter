@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import styles from "./singlePost.module.css";
 import Image from "next/image";
 import PostUser from "@/components/postUser/postUser";
-import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
 const getData = async (slug) => {
@@ -13,23 +12,15 @@ const getData = async (slug) => {
   }
   return res.json();
 };
-// export const generateMetadata = async ({ params }) => {
-//   const { slug } = params;
-//   const post = await getPost(slug);
-
-//   return {
-//     title: post.title,
-//     description: post.desc,
-//   };
-// };
 
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
-  // FETCH DATA WITH AN API
   const post = await getData(slug);
 
-  // FETCH DATA WITHOUT AN API
-  // const post = await getPost(slug);
+  var formattedDate = new Date(post.createdAt)
+    .toLocaleDateString("tr-TR")
+    .replace(/\//g, "-");
+
   return (
     <div className={styles.container}>
       {post.img && (
@@ -47,9 +38,7 @@ const SinglePostPage = async ({ params }) => {
           )}
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
-            <span className={styles.detailValue}>
-              {post.createdAt.toString().slice(0, 10)}
-            </span>
+            <span className={styles.detailValue}>{formattedDate}</span>
           </div>
         </div>
         <div className={styles.content}>{post?.desc}</div>
