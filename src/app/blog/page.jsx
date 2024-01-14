@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./blog.module.css";
 import PostCard from "@/components/postCard/postCard";
-import { getPosts } from "@/lib/data";
+import Pagination from "@/components/pagination/Pagination";
 
 export const metadata = {
   title: "Blog Page",
@@ -21,15 +21,17 @@ const getData = async () => {
 
 const BlogPage = async () => {
   const posts = await getData();
-  // const posts = await getPosts();
   return (
-    <div className={styles.container}>
-      {posts.map((post) => (
-        <div className={styles.post} key={post.id}>
-          <PostCard post={post} />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className={styles.container}>
+        {posts.map((post) => (
+          <div className={styles.post} key={post.id}>
+            <PostCard post={post} />
+          </div>
+        ))}
+      </div>
+      <Pagination />
+    </>
   );
 };
 
