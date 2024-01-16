@@ -6,6 +6,7 @@ import NavLink from "./navLink/navLink";
 import Image from "next/image";
 import { handleLogout } from "@/lib/action";
 import { auth } from "@/lib/auth";
+import ThemeToggle from "@/components/themeToggle/ThemeToggle";
 // import { handleLogout } from "@/lib/action";
 
 const links = [
@@ -36,6 +37,7 @@ const Links = ({ session }) => {
 
   return (
     <div className={styles.container}>
+      <ThemeToggle />
       <div className={styles.links}>
         {links.map((link) => (
           <NavLink item={link} key={link.title} />
