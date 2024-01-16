@@ -8,8 +8,8 @@ export const metadata = {
   description: "Contact description",
 };
 
-const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/blog", {
+const getData = async (page) => {
+  const res = await fetch(`http://localhost:3000/api/blog?page=${page}`, {
     next: { revalidate: 3600 },
   });
 
@@ -19,18 +19,22 @@ const getData = async () => {
   return res.json();
 };
 
-const BlogPage = async () => {
-  const posts = await getData();
+const BlogPage = async ({ page }) => {
+  const { posts, count } = await getData(page);
+  const POST_PER_PAGE = 6;
+
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
+  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
   return (
     <>
       <div className={styles.container}>
-        {posts.map((post) => (
-          <div className={styles.post} key={post.id}>
-            <PostCard post={post} key={post.id} />
+        {posts.map((item) => (
+          <div className={styles.post} key={item.id}>
+            <PostCard post={item} key={item.id} />
           </div>
         ))}
       </div>
-      <Pagination />
+      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
     </>
   );
 };
