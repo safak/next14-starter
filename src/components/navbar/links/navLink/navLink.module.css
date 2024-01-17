@@ -1,0 +1,20 @@
+/* :root {
+    --bg: #0d0c22;
+    --bgSoft: #2d2b42;
+    --text: white;
+    --textSoft: #e5e5e5;
+    --btn: #3663fd;
+} */
+
+.container {
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.active {
+    background-color: var(--text);
+    color: var(--bg);
+}
