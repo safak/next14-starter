@@ -2,6 +2,7 @@ import { getPosts } from "@/lib/data";
 import styles from "./adminPosts.module.css";
 import Image from "next/image";
 import { deletePost } from "@/lib/action";
+import Pagination from "../pagination/Pagination";
 
 const AdminPosts = async () => {
   const posts = await getPosts();
@@ -26,6 +27,7 @@ const AdminPosts = async () => {
           </form>
         </div>
       ))}
+      <Pagination />
     </div>
   );
 };

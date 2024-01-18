@@ -8,7 +8,8 @@
   width: 100px;
   border: none;
   padding: 16px;
-  background-color: crimson;
+  background-color: var(--btn);
+  ;
   color: white;
   cursor: pointer;
   border-radius: 3px;

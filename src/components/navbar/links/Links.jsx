@@ -37,7 +37,7 @@ const Links = ({ session }) => {
 
   return (
     <div className={styles.container}>
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <div className={styles.links}>
         {links.map((link) => (
           <NavLink item={link} key={link.title} />

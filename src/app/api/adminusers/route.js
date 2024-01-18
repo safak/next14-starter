@@ -1,11 +1,11 @@
-import { Post } from "@/lib/models";
+import { User } from "@/lib/models";
 import { connectToDb } from "@/lib/util";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
   const { searchParams } = new URL(req.url);
   const page = parseInt(searchParams.get("page")) || 1;
-  const POST_PER_PAGE = 6;
+  const POST_PER_PAGE = 4;
 
   const query = {
     take: POST_PER_PAGE,
@@ -14,7 +14,7 @@ export const GET = async (req) => {
 
   try {
     connectToDb();
-    const posts = await Post.find()
+    const users = await User.find()
       .skip(query.skip)
       .limit(query.take)
       .then((posts) => {
@@ -24,10 +24,11 @@ export const GET = async (req) => {
         console.error(err);
       });
 
-    // const count = Math.ceil((await Post.countDocuments({})) / 6);
-    const count = await Post.countDocuments({});
+    const count = await User.countDocuments({});
 
-    return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
+    console.log(users);
+
+    return new NextResponse(JSON.stringify({ users, count }, { status: 200 }));
   } catch (error) {
     console.log(error);
     throw new Error("Failed to fetch posts");
