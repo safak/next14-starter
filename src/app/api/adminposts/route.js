@@ -1,4 +1,4 @@
-import { User } from "@/lib/models";
+import { Post } from "@/lib/models";
 import { connectToDb } from "@/lib/util";
 import { NextResponse } from "next/server";
 
@@ -14,21 +14,28 @@ export const GET = async (req) => {
 
   try {
     connectToDb();
-    const users = await User.find()
-      .skip(query.skip)
-      .limit(query.take)
+
+    let postsQuery = Post.find().skip(query.skip).limit(query.take);
+
+    // Check if searchParams is empty, and adjust the query accordingly
+    if (!searchParams || searchParams.toString() === "") {
+      postsQuery = Post.find();
+    }
+
+    const posts = await postsQuery
       .then((posts) => {
+        if (posts.length === 0) {
+          return "Data not found";
+        }
         return posts;
       })
       .catch((err) => {
         console.error(err);
       });
 
-    const count = await User.countDocuments({});
+    const count = await Post.countDocuments({});
 
-    console.log(users);
-
-    return new NextResponse(JSON.stringify({ users, count }, { status: 200 }));
+    return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
   } catch (error) {
     console.log(error);
     throw new Error("Failed to fetch posts");

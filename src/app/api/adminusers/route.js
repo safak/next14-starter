@@ -14,20 +14,21 @@ export const GET = async (req) => {
 
   try {
     connectToDb();
-    const users = await User.find()
-      .skip(query.skip)
-      .limit(query.take)
-      .then((posts) => {
-        return posts;
+    let usersQuery = User.find().skip(query.skip).limit(query.take);
+
+    if (!searchParams || searchParams.toString() === "") {
+      usersQuery = User.find();
+    }
+
+    const users = await usersQuery
+      .then((users) => {
+        return users;
       })
       .catch((err) => {
         console.error(err);
       });
 
     const count = await User.countDocuments({});
-
-    console.log(users);
-
     return new NextResponse(JSON.stringify({ users, count }, { status: 200 }));
   } catch (error) {
     console.log(error);
