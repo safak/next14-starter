@@ -4,16 +4,16 @@ import PostCard from "@/components/postCard/postCard";
 const BlogPage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.posts}>
+      <div className={styles.post}>
         <PostCard />
       </div>
-      <div className={styles.posts}>
+      <div className={styles.post}>
         <PostCard />
       </div>
-      <div className={styles.posts}>
+      <div className={styles.post}>
         <PostCard />
       </div>
-      <div className={styles.posts}>
+      <div className={styles.post}>
         <PostCard />
       </div>
     </div>
