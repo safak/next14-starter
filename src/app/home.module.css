@@ -20,6 +20,7 @@
 .imgContainer {
     flex: 1;
     position: relative;
+    /* background-color: none; */
 }
 
 .title {
@@ -46,4 +47,15 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media(max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .boxes {
+        flex-direction: column;
+        gap: 50px;
+    }
 }
