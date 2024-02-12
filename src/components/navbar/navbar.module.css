@@ -1,0 +1,13 @@
+.container {
+    /* background-color: rgb(115, 115, 216);
+     */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
