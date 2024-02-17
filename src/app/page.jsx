@@ -1,10 +1,15 @@
 import Image from "next/image";
 import styles from "./home.module.css";
+import dynamic from "next/dynamic";
+
+const HydrationTest = dynamic(() => import("./hydration.test"), {ssr: false});
 
 const Home = () => {
+
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
+        <HydrationTest />
         <h1 className={styles.title}>Creative Thoughts Agency.</h1>
         <p className={styles.desc}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero
