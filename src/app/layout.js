@@ -7,8 +7,16 @@ import { Footer } from '@/shared/components/footer/footer';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next App',
-  description: 'Next.js starter app',
+  title: {
+    default: 'Next.js Starter App',
+    template: "%s | Next.js Starter App",
+  },
+  description: "Next.js Starter App",
+  image: "/og-image.jpg",
+  type: "website",
+  url: "https://nextjs-starter-app.vercel.app",
+  site_name: "Next.js Starter App",
+  locale: "en",
 }
 
 export default function RootLayout({ children }) {
