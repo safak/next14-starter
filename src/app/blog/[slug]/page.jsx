@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./single-post.module.css";
 import PostUser from "@/features/user-post/user-post";
-import { getPost } from "@/shared/lib/data";
+//import { getPost } from "@/shared/lib/data";
 import { Suspense } from "react";
 
 export const generateMetadata = async ({params}) => {
@@ -11,6 +11,16 @@ export const generateMetadata = async ({params}) => {
     description: post.description,
     image: post.img,
   };
+}
+
+const getPost = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`,{next: {revalidate: 3600}});
+
+  if(!res.ok){
+    throw new Error("Failed to fetch posts");
+  }
+
+  return res.json();
 }
 
 const SinglePostPage = async ({params}) => {
