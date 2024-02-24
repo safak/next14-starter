@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.styleQ {
+  clip-path: polygon(0 0, 100% 0%, 100% 88%, 0% 100%);
+}
+
+.style {
+  width: 161.936px;
+  height: 18.351px;
+  justify-content: center;
+  color: whitesmoke;
+  font-family: IBM Plex Mono;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.button {
+  transition: all 0.2s ease;
+}
+.button:active {
+  transform: scale(0.95);
+}

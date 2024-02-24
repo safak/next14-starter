@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/react": "18.2.57",
+    "autoprefixer": "^10.4.17",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.3.3"
   }
 }
