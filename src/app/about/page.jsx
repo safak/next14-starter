@@ -1,5 +1,11 @@
 import Image from "next/image";
 import styles from "./about.module.css";
+
+export const metadata = {
+  title: "About Page",
+  description: "About description",
+};
+
 const About = () => {
   return (
     <div>
@@ -31,7 +37,12 @@ const About = () => {
           </div>
         </div>
         <div className={styles.imgContainer}>
-          <Image src="/about.png" alt="About Image" fill className={styles.img} />
+          <Image
+            src="/about.png"
+            alt="About Image"
+            fill
+            className={styles.img}
+          />
         </div>
       </div>
     </div>

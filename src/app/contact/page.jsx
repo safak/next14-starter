@@ -1,6 +1,11 @@
-import React from 'react'
-import styles from './contact.module.css'
-import Image from 'next/image'
+import React from "react";
+import styles from "./contact.module.css";
+import Image from "next/image";
+
+export const metadata = {
+  title: "Contact Page",
+  description: "Contact description",
+};
 
 const ContactPage = () => {
   return (
@@ -30,6 +35,6 @@ const ContactPage = () => {
       </div>
     </div>
   );
-}
+};
 
-export default ContactPage
+export default ContactPage;

@@ -1,15 +1,21 @@
-import Link from 'next/link.js';
-import Links from './links/Links.jsx'
+import Link from "next/link.js";
+import Links from "./links/Links.jsx";
 import styles from "./navbar.module.css";
-const Navbar = () => {
+import { auth } from "@/lib/auth.js";
+
+const Navbar = async () => {
+  const session = await auth();
+
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.logo}>Logo</Link>
+      <Link href="/" className={styles.logo}>
+        Logo
+      </Link>
       <div>
-        <Links />
+        <Links session={session} />
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
