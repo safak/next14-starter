@@ -22,11 +22,23 @@ const Links = () => {
     },
   ];
 
+  //TEMPORARY VARIABLES
+  const isAdmin = true;
+  const sesstion = true;
+
   return (
     <div className={style.links}>
       {links.map(({ title, path }) => (
-        <NavLink key={path} path={path} title={title}/>
+        <NavLink key={path} path={path} title={title} />
       ))}
+      {sesstion ? (
+        <>
+          {isAdmin && <NavLink key={"/admin"} path="/admin" title={"Admin"} />}
+          <button>Logout</button>
+        </>
+      ) : (
+        <NavLink key={"/login"} path="/login" title={"Login"} />
+      )}
     </div>
   );
 };
