@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./links.module.css";
+import styles from "./links.module.css";
 import NavLink from "./navLink/NavLink";
 
 const Links = () => {
@@ -27,14 +27,14 @@ const Links = () => {
   const sesstion = true;
 
   return (
-    <div className={style.links}>
+    <div className={styles.links}>
       {links.map(({ title, path }) => (
         <NavLink key={path} path={path} title={title} />
       ))}
       {sesstion ? (
         <>
           {isAdmin && <NavLink key={"/admin"} path="/admin" title={"Admin"} />}
-          <button>Logout</button>
+          <button className={styles.logout}>Logout</button>
         </>
       ) : (
         <NavLink key={"/login"} path="/login" title={"Login"} />
