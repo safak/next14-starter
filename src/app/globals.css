@@ -31,3 +31,36 @@ a {
     flex-direction: column;
     justify-content: space-between;
 }
+
+@media (max-width: 1536) {
+    .container {
+        width: 1366px;
+        min-width: 90%;
+    }
+}
+@media (max-width: 1366) {
+    .container {
+        width: 1280px;
+    }
+}
+@media (max-width: 1280) {
+    .container {
+        width: 1024px;
+    }
+}
+@media (max-width: 1024) {
+    .container {
+        width: 768px;
+    }
+}
+@media (max-width: 768) {
+    .container {
+        width: 640px;
+    }
+}
+@media (max-width: 640px) {
+    .container {
+        width: 475px;
+        min-width: 90%;
+    }
+}
