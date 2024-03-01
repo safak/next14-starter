@@ -12,6 +12,9 @@
 .mobileLinks, .menuButton {
     display: none;
 }
+.menuBtn {
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
     .links {
