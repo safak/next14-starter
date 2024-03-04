@@ -7,7 +7,10 @@ import ClientSideProviderTest from '@/components/clientSideProviderTest'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Next App',
+  title: {
+    default: "Next 14 Home page",
+    template: "%s | Next 14"
+  },
   description: 'Next.js starter app',
 }
 

@@ -1,7 +1,7 @@
-import { Mongoose } from "mongoose";
-import { unique } from "next/dist/build/utils";
+import mongoose from 'mongoose';
+const { Schema } = mongoose;
 
-const userSchema = new Mongoose.schema({
+const userSchema = new Schema({
     username:{
         type:String,
         required:true,
@@ -30,7 +30,7 @@ const userSchema = new Mongoose.schema({
 },
 {timestamps: true})
 
-const postSchema = new Mongoose.schema({
+const postSchema = new Schema({
     title:{
         type:String,
         required:true,
@@ -55,5 +55,5 @@ const postSchema = new Mongoose.schema({
 {timestamps: true})
 
 
-export const User = Mongoose.models.User || Mongoose.model("User", userSchema)
-export const Post = Mongoose.models.Post || Mongoose.model("Post", postSchema)
+export const User = mongoose.models.User || mongoose.model("User", userSchema)
+export const Post = mongoose.models.Post || mongoose.model("Post", postSchema)
