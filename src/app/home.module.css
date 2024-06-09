@@ -1,0 +1,140 @@
+.container{
+    display: flex;
+    gap: 100px;
+    overflow-x: hidden;
+}
+
+.textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+
+
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 65px;
+  }
+
+
+.desc{
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 20px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.button{
+    padding: 20px;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    /* font-weight: bold; */
+    font-size: medium;
+
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.button:first-child{
+    background-color: var(--btn);
+    color: var(--text);
+}
+
+
+.brands{
+    width:500px;
+    height:50px;
+    position: relative;
+    
+}
+
+.imgContainer{ 
+    flex:1;
+    position: relative;
+    object-fit: contain;
+}
+
+.carousel{
+    display: flex;
+    position: relative;
+    width: 1080px;
+    height:716px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.heroImg{
+    object-fit: contain;
+}
+
+@media (max-width: 1024px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+       
+    }
+  
+    .buttons{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    .title{
+        font-size: 48px;
+    }
+    
+    .container{
+        flex-direction: column;
+    }
+    .imgContainer{
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 400px){
+    .title{
+        font-size: 48px;
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+    }
+    
+    
+}
+
+
+@media (max-width: 300px){
+    .title{
+        font-size: 42px;
+        text-align: center;
+    }
+    .container{
+        flex-direction: column;
+    }
+    
+    
+}

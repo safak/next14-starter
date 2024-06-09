@@ -1,0 +1,8 @@
+.carousel{
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  /* padding: 20px; */
+  align-self: center;
+  padding-bottom: 20px;
+}

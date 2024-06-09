@@ -1,0 +1,14 @@
+.container{
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+     position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #1F2544;
+}
+.logo{
+    
+}
