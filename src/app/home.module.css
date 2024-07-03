@@ -1,0 +1,187 @@
+.container {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+gap: 100px;
+}
+
+.homeSection, .aboutSection, .contactSection {
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+display: flex;
+gap: 20px;
+}
+
+.textContainer {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 50px;
+}
+
+.title {
+font-size: 66px;
+}
+
+.subtitle {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+
+.desc {
+font-size: 15px;
+}
+
+.buttons {
+display: flex;
+gap: 20px;
+}
+
+.button {
+padding: 20px;
+min-width: 120px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+}
+
+.button:first-child {
+background-color: var(--btn);
+color: var(--text);
+}
+
+.brands {
+width: 500px;
+height: 50px;
+position: relative;
+filter: grayscale(1);
+}
+
+.imgContainer {
+flex: 1;
+position: relative;
+overflow: hidden;
+height: 100px; 
+}
+
+.heroImg, .img {
+object-fit: cover;
+}
+
+.boxes {
+display: flex;
+gap: 20px;
+margin-top: 20px;
+}
+
+.box {
+flex: 1;
+text-align: center;
+}
+
+/* .appButton {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #007bff; 
+color: white;
+text-decoration: none;
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 1rem;
+transition: background-color 0.3s ease;
+}
+
+.appButton:hover {
+background-color: #0056b3; 
+} */
+
+@media (max-width: 1024px) {
+.container {
+flex-direction: column;
+text-align: center;
+}
+
+.buttons {
+justify-content: center;
+}
+
+.homeSection, .aboutSection {
+flex-direction: column;
+align-items: center;
+gap: 50px;
+}
+}
+
+@media (max-width: 768px) {
+.title {
+font-size: 64px;
+}
+
+.brands {
+width: 100%;
+}
+}
+
+.container {
+display: flex;
+align-items: center;
+gap: 100px;
+}
+
+.imgContainer {
+flex: 1;
+height: 500px;
+position: relative;
+}
+
+.img {
+object-fit: contain;
+}
+
+.formContainer {
+flex: 1;
+}
+
+.form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.form input,
+.form textarea {
+padding: 20px;
+border-radius: 5px;
+border: none;
+outline: none;
+background-color: var(--bgSoft);
+color: var(--text);
+}
+
+.form button {
+padding: 20px;
+background-color: var(--btn);
+color: var(--text);
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+@media (max-width: 768px) {
+.container {
+    flex-direction: column;
+}
+}
+
+.box h1 {
+    font-size: 80px;
+    color:#d2b746;
+}
+
+.box p {
+    font-size: 15px; /* Adjust the size as needed */
+}
