@@ -1,0 +1,10 @@
+.links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logout {
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
