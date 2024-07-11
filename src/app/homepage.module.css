@@ -1,0 +1,46 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: 100px;
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	gap: 50px;
+}
+
+.title {
+	font-size: 96px;
+	color: coral;
+}
+
+.desc {
+	font-size: 20px;
+}
+
+.buttons {
+	display: flex;
+	gap: 20px;
+}
+
+.button {
+	padding: 20px;
+	cursor: pointer;
+	min-width: 120px;
+	border: none;
+	border-radius: 5px;
+}
+
+.button:first-child {
+	background-color: coral;
+	color: var(--text);
+}
+
+.imageContainer {
+	flex: 1;
+	position: relative;
+	width: 40%;
+	height: 500px;
+}
