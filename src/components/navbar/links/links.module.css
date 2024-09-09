@@ -12,3 +12,38 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+/* PC画面ではスマホ用ナビゲーションバーとメニューボタンは非表示 */
+.menuButton,
+.mobileLinks {
+  display: none;
+}
+
+/* スマホ画面ではPC用のナビゲーションバーは非表示にする */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    cursor: pointer;
+  }
+  .mobileLinks {
+    position: absolute;
+    top: 100px;
+    /* 右端に表示 */
+    right: 0;
+    width: 50%;
+    /* ビューポート全体の高さから上に設定した100px分（ヘッダーの高さ）を引いた残りの部分に
+    .mobileLinks 要素を表示する */
+    height: calc(100vh - 100px);
+    /* background-color: var(--bg); */
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
