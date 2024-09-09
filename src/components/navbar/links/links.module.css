@@ -1,0 +1,14 @@
+.links {
+  /* ここでdisplayとalign-itemsはつけなくても見た目に変化はない */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logout {
+  padding: 10px;
+  /* ホバーした時のカーソルの表示をポインターに設定
+  リンクは自動的にカーソルになるが、ボタンはならないため */
+  cursor: pointer;
+  font-weight: bold;
+}

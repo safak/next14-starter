@@ -1,0 +1,44 @@
+/* どのコンポーネントやページにも使えるようにしたいCSS */
+
+/* スタイルを変数で定義することができる */
+:root {
+  --bg: #0d0c22;
+  --bgsoft: #2d2b42;
+  --text: white;
+  --textsoft: #e5e5e5;
+  --btn: #3673fd;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  /* クリック済みの色が変更される機能をなしに */
+  text-decoration: none;
+  /* 親要素の色を指定する */
+  color: inherit;
+}
+
+.container {
+  width: 1536px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  /* 高さをブラウザの高さと同じにする */
+  min-height: 100vh;
+  /* ナビゲーションバー、コンテンツ、フッターをそれぞれ分けたい */
+  /* flexのflex-directionのデフォルトはrow */
+  display: flex;
+  /* 各要素が縦に並ぶように設定 */
+  flex-direction: column;
+  /* 各要素に空間を空ける */
+  justify-content: space-between;
+}

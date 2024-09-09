@@ -1,0 +1,13 @@
+.container {
+  height: 100px;
+  display: flex;
+  /* 子要素をボックスの中央に配置 */
+  align-items: center;
+  /* 子要素を離す */
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
