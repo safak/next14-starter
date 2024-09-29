@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  height: 100%;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+/* postCard.module.css */
+.imgContainer {
+  position: relative;
+  width: 100%; /* Ширина 100% */
+  height: 400px; /* Высота задана */
+  overflow: hidden; /* Скрывает часть изображения, если оно превышает контейнер */
+}
+
+.img {
+  object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+.date {
+  font-size: small;
+  transform: rotate(270deg);
+  margin: auto;
+}
+.bottom {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tittle {
+  font-style: 24px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+.desc {
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: gray;
+  width: 90%;
+}
+.link {
+  text-decoration: underline;
+}
