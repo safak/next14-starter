@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@plugin 'tailwindcss-animate';
+
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #0d0c22;
+    --color-primary-soft: #2d2b42;
+    --color-txt: #fff;
+    --color-txt-soft: #e5e5e5;
+    --color-txt-btn: #3673fd;
+}
+
+:root {
+    --bg: #0d0c22;
+    --bg-soft: #2d2b42;
+    --text: #fff;
+    --text-soft: #e5e5e5;
+    --btn: #3673fd;
+    --grid-cols-auto: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+} 
+
+html {
+    min-width: 100dvw;
+    min-height: 100dvh;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100dvh;
+}
+
+.rotate-text {
+    writing-mode: sideways-lr;
+  }
