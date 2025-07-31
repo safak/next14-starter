@@ -1,0 +1,128 @@
+.footer {
+    color: white;
+    padding: 150px 0 0 0;
+    position: relative;
+}
+
+.topLine {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 45%;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.madeWithLove {
+    font-family: "Bodoni Moda", serif;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 60px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.teamInvicta {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 45px;
+    font-weight: 200;
+    line-height: 60px;
+    text-align: left;
+    font-style: italic;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    margin-top: 80px;
+}
+
+.link {
+    color: #88b2d0;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.icon {
+    margin-left: 48px;
+    display: inline-flex;
+}
+
+.svgIcon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.lineContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    width: 200%;
+    margin: 16px 0;
+}
+
+.socials {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 16px;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.copy {
+    font-size: 12px;
+}
+
+.logoContainer {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo {
+    width: 120px;
+    height: 130px;
+}
