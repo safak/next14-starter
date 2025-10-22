@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(54, 115, 253, 0.2);
+}
+
+.imgContainer {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.container:hover .img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.category {
+  background-color: var(--btn);
+  color: var(--text);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  color: var(--text);
+}
+
+.desc {
+  color: var(--textsoft);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech {
+  background-color: var(--bg);
+  color: var(--textsoft);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid rgba(54, 115, 253, 0.3);
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.link {
+  background-color: var(--btn);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.linkSecondary {
+  background-color: transparent;
+  color: var(--btn);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--btn);
+  transition: all 0.3s ease;
+  flex: 1;
+  text-align: center;
+}
+
+.linkSecondary:hover {
+  background-color: var(--btn);
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .imgContainer {
+    height: 200px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+}
